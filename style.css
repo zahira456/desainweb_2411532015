@@ -1,0 +1,213 @@
+  
+body {
+        font-family: 'Tahoma', sans-serif;
+        background-color: rgb(94, 96, 128);
+    }
+    nav {
+  background: #2c2f48;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+nav a {
+  color: #f4f4f9;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a5b4fc;
+}
+    a{ 
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(191, 182, 182);
+    font-weight: bold;
+    }
+ 
+
+
+
+/* ========== HEADER ========== */
+.header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+#installBtn {
+  position: absolute;      /* biar bisa ditempatkan bebas */
+  top: 9px;               /* jarak dari atas halaman */
+  right: 70px;             /* jarak dari sisi kanan */
+  width: 60px;             /* ukuran tombol kecil */
+  height: 30px;
+  border: none;
+  background: #342a51;     /* warna biru */
+  color: white;            /* ikon/teks putih */
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* biar ikon pas di tengah */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#installBtn:hover {
+  background: #6555ae;    /* warna lebih gelap saat hover */
+}
+
+
+    /* Bisa juga pakai ikon biar lebih ringkas */
+    #installBtn.small {
+      padding: 6px;
+      font-size: 16px;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+    }
+
+
+/* ========== CONTENT ========== */
+.content {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.content h1, 
+.content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content p {
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ========== IMAGE ========== */
+.profile-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ========== FORM ========== */
+form {
+  background: #3c4369;
+  padding: 50px;
+  border-radius: 10px;
+  width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 95%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #eaeaf6;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+button {
+  background: #2c2f48;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #464a6e;
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  padding: 10px 16px;
+  background: #2c2f48;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #2c2f48;
+  font-weight: bold;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 90%;
+  }
+}

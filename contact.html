@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="contact-header">
+    <h1>Contact Me</h1>
+    <p>Silakan isi form di bawah ini untuk menghubungi saya:</p>
+  </div>
+
+  <form id="contactForm" onsubmit="submitForm(event)">
+    <label>Nama:</label>
+    <input type="text" name="name" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    
+    <label>Nomor HP:</label>
+    <input type="text" name="phone" pattern="[0-9]{10,13}" required>
+
+    <label for="category">Kategori Pesan:</label><br>
+    <select id="category" name="category" required>
+      <option value="">--Pilih--</option>
+      <option value="pertanyaan">Pertanyaan</option>
+      <option value="saran">Saran</option>
+      <option value="masalah">Masalah</option>
+    </select><br><br>
+
+    <label for="message">Pesan:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <label>Ingin menerima balasan?</label><br>
+    <input type="radio" id="yes" name="reply" value="ya" required> Ya
+    <input type="radio" id="no" name="reply" value="tidak"> Tidak<br><br>
+
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div class="social-links">
+    <a href="mailto:zahirasyifa456@gmail.com">Email</a>
+    <a href="https://www.instagram.com/za_niverse/">Instagram</a>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); 
+      alert("Form berhasil dikirim!");
+      document.getElementById("contactForm").reset();
+    }
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch(err => console.error("SW registration failed:", err));
+    }
+  </script>
+</body>
+</html>
